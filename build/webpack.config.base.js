@@ -9,20 +9,13 @@ const config = {
   output: {
     filename: 'bundle.[hash:8].js',
     path: path.join(__dirname, '../dist'),
-    // publicPath: 'http://127.0.0.1:8000/public/'
   },
   module: {
     rules: [
-      // {
-      //   test: /\.(vue|js|jsx)$/,
-      //   loader: 'eslint-loader',
-      //   exclude: /node_modules/,
-      //   enforce: 'pre'
-      // },
+      
       {
         test: /\.vue$/,
         loader: 'vue-loader',
-        // options: createVueLoaderOptions(isDev)
       },
       {
         test: /\.jsx$/,

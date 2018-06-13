@@ -14,9 +14,7 @@ const defaultPluins = [
             NODE_ENV: isDev ? '"development"' : '"production"'
         }
     }),
-    new HTMLPlugin({
-        template: path.join(__dirname, 'template.html')
-    }),
+    new HTMLPlugin(),
     new VueClientPlugin()
 ]
 
