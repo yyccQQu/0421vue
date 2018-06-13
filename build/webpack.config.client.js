@@ -34,7 +34,7 @@ if (isDev) {
             rules: [{
                 test: /\.styl/,
                 use: [
-                    'vue-style-loader',
+                    'vue-style-loader', //热重载
                     'css-loader',
                     {
                         loader: 'postcss-loader',
