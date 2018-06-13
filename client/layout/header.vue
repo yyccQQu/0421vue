@@ -1,10 +1,11 @@
 <template>
-  <header class="main-header">
+<!--doc loader配置用-->
+  <header class="main-header" :class="$style.mainHeader">
     <h1>JTodo</h1>
   </header>
 </template>
 
-<style lang="stylus" scoped>
+<style lang="stylus" scoped module>
 .main-header{
   text-align center
   h1{

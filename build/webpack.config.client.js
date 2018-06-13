@@ -35,7 +35,13 @@ if (isDev) {
                 test: /\.styl/,
                 use: [
                     'vue-style-loader', //热重载
-                    'css-loader',
+                    {
+                        loader: 'css-loader',
+                        // options: {
+                        //     module: true, //开启css模式
+                        //     localIdentName: isDev ? '[path]-[name]-[hash:base64:5]' : '[hash:base64:5]',
+                        // }
+                    },
                     {
                         loader: 'postcss-loader',
                         options: {
