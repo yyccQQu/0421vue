@@ -1,28 +1,28 @@
 const path = require('path')
-const createVueLoaderOptions = require('./vue-loader.config')
+// const createVueLoaderOptions = require('./vue-loader.config')
 
-const isDev = process.env.NODE_ENV === 'development'
+// const isDev = process.env.NODE_ENV === 'development'
 
 const config = {
   target: 'web',
-  entry: path.join(__dirname, '../client/client-entry.js'),
+  entry: path.join(__dirname, '../src/index.js'),
   output: {
     filename: 'bundle.[hash:8].js',
-    path: path.join(__dirname, './public'),
-    publicPath: 'http://127.0.0.1:8000/public/'
+    path: path.join(__dirname, 'dist'),
+    // publicPath: 'http://127.0.0.1:8000/public/'
   },
   module: {
     rules: [
-      {
-        test: /\.(vue|js|jsx)$/,
-        loader: 'eslint-loader',
-        exclude: /node_modules/,
-        enforce: 'pre'
-      },
+      // {
+      //   test: /\.(vue|js|jsx)$/,
+      //   loader: 'eslint-loader',
+      //   exclude: /node_modules/,
+      //   enforce: 'pre'
+      // },
       {
         test: /\.vue$/,
         loader: 'vue-loader',
-        options: createVueLoaderOptions(isDev)
+        // options: createVueLoaderOptions(isDev)
       },
       {
         test: /\.jsx$/,
