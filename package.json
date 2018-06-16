@@ -6,7 +6,7 @@
   "scripts": {
     "lint": "eslint --ext .js --ext .jsx --ext .vue client/",
     "lint-fix": "eslint --fix --ext .js --ext .jsx --ext .vue client/",
-    "precommit": "npm run lint-fix",
+    
     "test": "echo \"Error: no test specified\" && exit 1",
     "clean": "rimraf dist",
     "build:client": "cross-env NODE_ENV=production webpack --config webpack.config.js",
