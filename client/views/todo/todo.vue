@@ -28,6 +28,21 @@ import Item from './item.vue'
 import Tabs from './tabs.vue'
 let id = 0
 export default {
+  beforeRouteEnter (to, from, next) {
+    console.log('todo before enter', this)
+    next(vm => {
+      console.log('after enter vm.id is ', vm.id)
+    })
+  },
+  //同样的路由形式但是参数发生改变的时候才会被触发
+  beforeRouteUpdate (to, from, next) {
+    console.log('todo update enter')
+    next()
+  },
+  beforeRouteLeave (to, from, next) {
+    console.log('todo leave enter')
+    next()
+  },
   props: ['id'],//解耦
   data() {
     return {

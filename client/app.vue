@@ -11,6 +11,8 @@
       <router-view />
     </transition>
     <Footer></Footer>
+
+    <!-- <router-view name="a"></router-view> 路由命名 -->
   </div>
 </template>
 
