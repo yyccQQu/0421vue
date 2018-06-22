@@ -17,6 +17,32 @@ Vue.use(Vuex)
 const router = createRouter()
 const store = createStore()
 
+store.registerModule('c', {
+  state: {
+    text: 3
+  }
+})
+//store.registerModule('c') 解除异步加载c模块
+
+//store watch 用方法接收一个state值，当该值发生改变时，触发第二个方法
+store.watch((state) => state.count + 1, (newCount) => {
+  console.log('new count watched:', newCount)
+})
+
+//当mutation被调用时，都会触发这个方法
+// store.subscribe((mutation, state) => {
+//   console.log(mutation.type)
+//   console.log(mutation.payload)
+// })
+
+//当action被调用时，都会触发这个方法
+store.subscribeAction((action, state) => {
+  console.log(action.type)
+  console.log(action.payload)
+})
+
+
+
 const root = document.createElement('div')
 document.body.appendChild(root)
 
